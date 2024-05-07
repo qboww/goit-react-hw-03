@@ -38,11 +38,13 @@ const App = () => {
   );
 
   return (
-    <div className="container card">
-      <h1>Phonebook</h1>
-      <ContactForm onAdd={addContact} />
-      <SearchBox value={filter} onFilter={setFilter} />
-      <ContactList contacts={visibleContacts} onDelete={deleteContact} />
+    <div className="container">
+      <div className="card">
+        <h1>Phonebook</h1>
+        <ContactForm onAdd={addContact} />
+        <SearchBox value={filter} onFilter={setFilter} />
+        <ContactList contacts={visibleContacts} onDelete={deleteContact} />
+      </div>
     </div>
   );
 };

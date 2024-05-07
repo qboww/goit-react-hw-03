@@ -56,7 +56,7 @@ export const ContactForm = ({ onAdd }) => {
                 type="text"
                 id={nameFieldId}
                 name="name"
-                placeholder="Enter name"
+                placeholder="Enter name..."
               />
               <ErrorMessage className={css.error} name="name" component="span" />
             </div>
@@ -66,7 +66,7 @@ export const ContactForm = ({ onAdd }) => {
                 type="text"
                 id={numberFieldId}
                 name="number"
-                placeholder="Enter phone number"
+                placeholder="Enter phone number..."
               />
               <ErrorMessage
                 className={css.error}
