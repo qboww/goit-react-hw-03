@@ -16,7 +16,9 @@ const App = () => {
   const [filter, setFilter] = useState("");
 
   useEffect(() => {
-    window.localStorage.setItem("contacts", JSON.stringify(contacts), [contacts]);
+    window.localStorage.setItem("contacts", JSON.stringify(contacts), [
+      contacts,
+    ]);
   });
 
   const addContact = (newContact) => {
@@ -32,7 +34,7 @@ const App = () => {
   };
 
   const visibleContacts = contacts.filter((contact) =>
-    contact.name.toLowerCase().includes(filter.toLowerCase())
+    contact.name.toLowerCase().includes(filter.toLowerCase()),
   );
 
   return (
