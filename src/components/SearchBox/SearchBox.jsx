@@ -1,5 +1,5 @@
 export const SearchBox = () => {
-  return <div>SearchBox</div>;
+  return <div></div>;
 };
 
 export default SearchBox;

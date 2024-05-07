@@ -1,6 +1,6 @@
 export const ContactForm = () => {
   return (
-    <div>ContactForm</div>
+    <div></div>
   )
 }
 
