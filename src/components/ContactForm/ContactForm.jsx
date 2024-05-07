@@ -2,6 +2,8 @@ import { Field, Formik, Form } from "formik";
 import { nanoid } from "nanoid";
 import { useId } from "react";
 
+import css from "./ContactForm.module.css";
+
 const initialValues = {
   id: nanoid(),
   name: "",
@@ -22,19 +24,27 @@ export const ContactForm = ({ onAdd }) => {
   };
 
   return (
-    <Formik initialValues={initialValues} onSubmit={handleSubmit}>
-      <Form>
-        <div>
-          <label htmlFor={nameFieldId}>Name</label>
-          <Field id={nameFieldId} name="name" />
-        </div>
-        <div>
-          <label htmlFor={numberFieldId}>Number</label>
-          <Field id={numberFieldId} name="number" />
-        </div>
-        <button type="submit">Add contact</button>
-      </Form>
-    </Formik>
+    <div className={css.contactForm}>
+      <Formik initialValues={initialValues} onSubmit={handleSubmit}>
+        <Form>
+          <div>
+            <label htmlFor={nameFieldId}>Name</label>
+            <Field type="text" id={nameFieldId} name="name" required placeholder="Enter name" />
+          </div>
+          <div>
+            <label htmlFor={numberFieldId}>Number</label>
+            <Field
+              type="text"
+              id={numberFieldId}
+              name="number"
+              required
+              placeholder="Enter phone number"
+            />
+          </div>
+          <button type="submit">Add contact</button>
+        </Form>
+      </Formik>
+    </div>
   );
 };
 

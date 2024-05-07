@@ -1,0 +1,16 @@
+.contactsList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  gap: 16px;
+  border-top: 1px solid grey;
+  padding: 16px 0px;
+}
+
+.listHeader {
+  margin: 0px;
+}
+
+p{
+  margin: 0;
+}

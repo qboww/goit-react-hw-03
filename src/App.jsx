@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import initialContacts from "./data/initial-contacts.json";
+
 import SearchBox from "./components/SearchBox/SearchBox";
 import ContactForm from "./components/ContactForm/ContactForm";
 import ContactList from "./components/ContactList/ContactList";
@@ -8,8 +9,15 @@ import ContactList from "./components/ContactList/ContactList";
 import "./App.css";
 
 const App = () => {
-  const [contacts, setContacts] = useState(initialContacts);
+  const [contacts, setContacts] = useState(() => {
+    const savedContacts = window.localStorage.getItem("contacts");
+    return savedContacts ? JSON.parse(savedContacts) : initialContacts;
+  });
   const [filter, setFilter] = useState("");
+
+  useEffect(() => {
+    window.localStorage.setItem("contacts", JSON.stringify(contacts), [contacts]);
+  });
 
   const addContact = (newContact) => {
     setContacts((prevContacts) => {
