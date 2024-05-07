@@ -13,6 +13,7 @@ export const SearchBox = ({ value, onFilter }) => {
         name="filter"
         id={filterFieldId}
         value={value}
+        placeholder="Enter search prompt"
         onChange={(e) => onFilter(e.target.value)}
       />
     </div>
