@@ -1,12 +1,15 @@
-form input {
-  margin-bottom: 16px;
-}
-
-form {
-  margin-bottom: 32px;
-}
-
 .error {
   color: red;
   margin-left: 16px;
+}
+
+h2 {
+  font-size: 24px;
+  padding-bottom: 16px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid black;
+}
+
+.contactForm input {
+  margin-bottom: 16px;
 }

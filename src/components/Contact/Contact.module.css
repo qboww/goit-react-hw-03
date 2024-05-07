@@ -10,14 +10,12 @@
   border-radius: 5px;
 }
 
-button {
-  cursor: pointer;
+.contactItem {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
 }
 
-.contactItem p {
-  margin: 0;
-}
-
-.contactIcon{
+.contactIcon {
   margin-right: 8px;
 }

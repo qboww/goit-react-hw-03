@@ -41,41 +41,43 @@ export const ContactForm = ({ onAdd }) => {
   };
 
   return (
-    <div className={css.contactForm}>
-      <Formik
-        initialValues={initialValues}
-        validationSchema={validationSchema}
-        onSubmit={handleSubmit}
-      >
-        <Form>
-          <div>
-            <label htmlFor={nameFieldId}>Name</label>
-
-            <Field
-              type="text"
-              id={nameFieldId}
-              name="name"
-              placeholder="Enter name"
-            />
-            <ErrorMessage className={css.error} name="name" component="span" />
-          </div>
-          <div>
-            <label htmlFor={numberFieldId}>Number</label>
-            <Field
-              type="text"
-              id={numberFieldId}
-              name="number"
-              placeholder="Enter phone number"
-            />
-            <ErrorMessage
-              className={css.error}
-              name="number"
-              component="span"
-            />
-          </div>
-          <button type="submit">Add contact</button>
-        </Form>
-      </Formik>
+    <div className="sub-card">
+      <h2>Form</h2>
+      <div className={css.contactForm}>
+        <Formik
+          initialValues={initialValues}
+          validationSchema={validationSchema}
+          onSubmit={handleSubmit}
+        >
+          <Form>
+            <div>
+              <label htmlFor={nameFieldId}>Name</label>
+              <Field
+                type="text"
+                id={nameFieldId}
+                name="name"
+                placeholder="Enter name"
+              />
+              <ErrorMessage className={css.error} name="name" component="span" />
+            </div>
+            <div>
+              <label htmlFor={numberFieldId}>Number</label>
+              <Field
+                type="text"
+                id={numberFieldId}
+                name="number"
+                placeholder="Enter phone number"
+              />
+              <ErrorMessage
+                className={css.error}
+                name="number"
+                component="span"
+              />
+            </div>
+            <button type="submit">Add contact</button>
+          </Form>
+        </Formik>
+      </div>
     </div>
   );
 };
