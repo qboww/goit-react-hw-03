@@ -17,3 +17,7 @@ button {
 .contactItem p {
   margin: 0;
 }
+
+.contactIcon{
+  margin-right: 8px;
+}
