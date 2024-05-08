@@ -1,5 +1,6 @@
 .error {
   color: red;
+  border-bottom: 1px solid;
   margin-left: 16px;
 }
 
@@ -14,4 +15,10 @@ h2 {
   max-width: 235px;
   width: 100%;
   margin-bottom: 16px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }

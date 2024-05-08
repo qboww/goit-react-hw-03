@@ -4,7 +4,11 @@ import css from "./ContactList.module.css";
 
 export const ContactList = ({ contacts, onDelete }) => (
   <div className="sub-card">
-    <h2 className={css.listHeader}>Contacts List</h2>
+    <div className={css.listParams}>
+      <h2>Contacts List</h2>
+      <p>Length: {contacts.length}</p>
+    </div>
+
     <ul className={css.contactsList}>
       {contacts.length ? (
         contacts.map((contact) => (

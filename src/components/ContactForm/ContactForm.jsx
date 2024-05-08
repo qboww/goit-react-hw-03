@@ -22,9 +22,9 @@ const validationSchema = yup.object().shape({
   number: yup
     .string()
     .required("Number is required")
-    .matches(/^\d+$/, "Number must contain only digits")
-    .min(3, "Number must be at least 3 digits")
-    .max(12, "Number cannot exceed 12 digits"),
+    .matches(/^[\d-]+$/, "Number must contain only digits or hyphens")
+    .min(3, "Number must be at least 3 characters")
+    .max(12, "Number cannot exceed 12 characters"),
 });
 
 export const ContactForm = ({ onAdd }) => {
@@ -58,7 +58,11 @@ export const ContactForm = ({ onAdd }) => {
                 name="name"
                 placeholder="Enter name..."
               />
-              <ErrorMessage className={css.error} name="name" component="span" />
+              <ErrorMessage
+                className={css.error}
+                name="name"
+                component="span"
+              />
             </div>
             <div>
               <label htmlFor={numberFieldId}>Number</label>

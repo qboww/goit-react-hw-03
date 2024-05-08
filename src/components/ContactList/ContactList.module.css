@@ -4,9 +4,19 @@
   gap: 16px;
 }
 
-.listHeader {
-  font-size: 24px;
-  padding-bottom: 16px;
-  margin-bottom: 16px;
+.listParams {
+  display: flex;
+  justify-content: space-between;
   border-bottom: 1px solid grey;
+  margin-bottom: 16px;
+}
+
+.listParams h2 {
+  font-size: 24px;
+  border: none;
+  margin: 0px;
+}
+
+.listParams p {
+  font-size: 14px;
 }
