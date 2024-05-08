@@ -8,7 +8,7 @@ export const SearchBox = ({ value, onFilter }) => {
   return (
     <div className="sub-card">
       <div className={css.searchContainer}>
-        <h2>Search contacts</h2>
+        <h2>Search for someone</h2>
         <label htmlFor={filterFieldId}>Find contacts by name</label>
         <input
           type="text"

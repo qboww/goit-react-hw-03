@@ -42,7 +42,7 @@ export const ContactForm = ({ onAdd }) => {
 
   return (
     <div className="sub-card">
-      <h2>Form</h2>
+      <h2>Add a person</h2>
       <div className={css.contactForm}>
         <Formik
           initialValues={initialValues}

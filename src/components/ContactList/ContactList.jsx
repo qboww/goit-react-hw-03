@@ -5,7 +5,7 @@ import css from "./ContactList.module.css";
 export const ContactList = ({ contacts, onDelete }) => (
   <div className="sub-card">
     <div className={css.listParams}>
-      <h2>Contacts List</h2>
+      <h2>Check contacts list</h2>
       <p>Length: {contacts.length}</p>
     </div>
 
